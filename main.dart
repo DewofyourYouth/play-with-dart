@@ -1,15 +1,13 @@
 import 'Person.dart';
 
 void main() {
-  print(eliyahu.fartSmeller());
-  print(chani.fartSmeller());
-  jacob.printAge();
-  chani.printAge();
-  eliyahu.printAge();
-  print(jacob.drinkString());
-  print(chani.drinkString());
-  print(eliyahu.drinkString());
-  print(eliyahu.canDrink());
+  List<Person> people = [eliyahu, jacob, chani];
+
+  for (Person p in people) {
+    p.printAge();
+    print(p.canDrink());
+    print(p.fartSmeller());
+  }
 }
 
 Person eliyahu = Person("Eliyahu", "Shore", DateTime(2010, DateTime.july, 28));

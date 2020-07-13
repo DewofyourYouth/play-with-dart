@@ -1,8 +1,11 @@
+import 'main.dart';
+
 class Person {
   String firstName, lastName;
   DateTime birthday;
+  Gender gender;
 
-  Person(this.firstName, this.lastName, this.birthday);
+  Person(this.firstName, this.lastName, this.birthday, this.gender);
 
   int yearsOld() =>
       (DateTime.now().difference(this.birthday).inDays / 365).floor();
@@ -17,5 +20,5 @@ class Person {
       print("${this.firstName} ${this.lastName} is ${yearsOld()} years old!");
 
   String fartSmeller() =>
-      "Hey ${this.firstName} you're a fart smeller...\nUmm... I mean, smart feller\n";
+      "Hey ${this.firstName} you're a fart smeller...\nUmm... I mean, smart feller";
 }
